@@ -124,7 +124,7 @@ public class OneRingDemo extends AbstractDemo {
 				} else {
 					red = green = blue = 0xCC;
 				}
-				System.out.println("Red: " + red + " green: " + green + " blue: " + blue);
+				//System.out.println("Red: " + red + " green: " + green + " blue: " + blue);
 				Color c = new Color(red, green, blue);
 				return new Ball(radius, c);
 			}

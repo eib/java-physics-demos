@@ -10,9 +10,9 @@ Physics Engine
 The physics engine has support for "global" and "interaction" effects.
 It updates in time with the rendering engine. 
 
-Built-in global effects:
+Global effects:
 * Gravity
-* Viscosity
+* Gas/liquid drag (resistance to movement)
 * Electric field (on charged particles)
 
 Interaction effects:
@@ -41,8 +41,6 @@ Built-in simulations:
 * Coulomb's law
 * Charged particles in an electric field
 * A sandbox to mix collisions, velocity, mass, and/or gravity.
-
-Additional simulations:
 * Piston: a "piston" interacting with tiny particles (a "gas") in an enclosed container.
 * Pendulum: still a work-in-progress.
 

@@ -32,6 +32,8 @@ import com.eblackwelder.physx.demos.CoulombsLawDemo;
 import com.eblackwelder.physx.demos.ElectricFieldDemo;
 import com.eblackwelder.physx.demos.GravityDemo;
 import com.eblackwelder.physx.demos.IDemo;
+import com.eblackwelder.physx.demos.OneRingDemo;
+import com.eblackwelder.physx.demos.PressureDemo;
 import com.eblackwelder.physx.demos.RollYourOwnDemo;
 import com.eblackwelder.physx.demos.options.BooleanOption;
 import com.eblackwelder.physx.demos.options.Option;
@@ -48,9 +50,11 @@ public class Main {
 		new GravityDemo(),
 		new CollisionDetectionDemo(),
 		new BuoyancyDemo(),
-		new RollYourOwnDemo(),
+		new ElectricFieldDemo(),
 		new CoulombsLawDemo(),
-		new ElectricFieldDemo()
+		new OneRingDemo(),
+		new PressureDemo(),
+		new RollYourOwnDemo(),
 	};
 	
 	private static JComponent createOptionsPanel(final IDemo demo, final JFrame parent) {

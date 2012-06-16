@@ -45,12 +45,12 @@ public class PressureDemo extends AbstractDemo {
 	private final Option<Color>   colorOption           = new RandomizableOption<Color>(new ChoicesOption<Color>("Color", names, colors, 3), false);
 
 	private final Option<Boolean> openTopOption         = new BooleanOption("Open on top", true);
-	private final Option<Integer> numBallsOption        = new IntegerRangeOption("Number of balls", 0, 1000, 200, 20);
-	private final Option<Integer> gravityOption         = new IntegerRangeOption("Gravity", 0, 300, 160, 10);
-	private final Option<Integer> massOption            = new IntegerRangeOption("Mass of block", 1000, 500000, 10000, 1000);
+	private final Option<Integer> numBallsOption        = new IntegerRangeOption("Number of balls", 0, 1000, 150, 20);
+	private final Option<Integer> gravityOption         = new IntegerRangeOption("Gravity", 0, 300, 200, 10);
+	private final Option<Integer> massOption            = new IntegerRangeOption("Mass of block", 1000, 500000, 15000, 1000);
 	
 	private final Option<Integer> minRadiusOption       = new IntegerRangeOption("Min. ball radius", 3, 30, 5, 1);
-	private final Option<Integer> maxRadiusOption       = new IntegerRangeOption("Max. ball radius", 3, 30, 10, 1);
+	private final Option<Integer> maxRadiusOption       = new IntegerRangeOption("Max. ball radius", 3, 30, 5, 1);
 
 	private final Option<Integer> minVelocityOption     = new IntegerRangeOption("Min. velocity", 10, 1000, 50, 10);
 	private final Option<Integer> maxVelocityOption     = new IntegerRangeOption("Max. velocity", 10, 1000, 300, 10);
@@ -72,7 +72,7 @@ public class PressureDemo extends AbstractDemo {
 
 	@Override
 	public String getTitle() {
-		return "Air Pressure";
+		return "Piston";
 	}
 
 	@Override
@@ -220,10 +220,10 @@ class TargettedCollisionDetection extends CollisionDetection implements Updatabl
 				o1.addForce(new Vector2D(0, f1));
 				o2.addForce(new Vector2D(0, f2));
 				
-				System.out.println(String.format("Forces: %.2f, %.2f\tDelta-v: %.3f, %.3f", f1, f2, (v1f - v1i), (v2f - v2i)));
+				//System.out.println(String.format("Forces: %.2f, %.2f\tDelta-v: %.3f, %.3f", f1, f2, (v1f - v1i), (v2f - v2i)));
 			}
-		} else {
-			super.collide(o1, o2);
+//		} else {
+//			super.collide(o1, o2);
 		}
 	}
 
