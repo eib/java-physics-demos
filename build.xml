@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./ant2html.xsl"?>
+<!-- ====================================================================== 
+A series of Physics demos using re-usable 2D physics and graphics engines.
+		Copyright 2010 Ethan Blackwelder.
+====================================================================== -->
+
+<project name="Physics Demos" default="prepare">
+	<description>
+		A series of Physics demos using re-usable 2D physics and graphics engines.
+		Copyright 2010 Ethan Blackwelder.
+	</description>
+
+	<tstamp>
+		<format property="timestamp" pattern="dd-MM-yyyy hh:mm aa"/>
+	</tstamp>
+
+	<property file="build.properties"/>
+	
+	<path id="classpath.compile">
+		<pathelement location="${dist.home}/${jar.name}"/>
+		<fileset dir="${dist.home}" includes="*.jar"/>
+	</path>
+	
+	<path id="classpath.run">
+		<fileset dir="${dist.home}" includes="*.jar"/>
+	</path>
+	
+	<target name="prepare" description="Makes target directories, copy non-Java resources, etc.">
+		<mkdir dir="${build.home}" />
+		<mkdir dir="${dist.home}" />
+		
+		<antcall target="-copy-resources">
+			<param name="resources.srcdir" value="${src.home}"/>
+			<param name="resources.destdir" value="${build.home}"/>
+		</antcall>
+		<antcall target="-copy-resources">
+			<param name="resources.srcdir" value="${demos.home}"/>
+			<param name="resources.destdir" value="${build.home}"/>
+		</antcall>
+	</target>
+	
+	<target name="clean" description="Clean-up time">
+		<delete dir="${build.home}" verbose="${verbose.mode}"/>
+		<delete dir="${dist.home}"  verbose="${verbose.mode}"/>
+	</target>
+	
+	<target name="-copy-resources" description="Copies image resources to a specific build directory.">
+		<fail message="Please set the 'resources.srcdir' parameter."  unless="resources.srcdir"/>
+		<fail message="Please set the 'resources.destdir' parameter." unless="resources.destdir"/>
+
+		<copy todir="${resources.destdir}" includeemptydirs="no">
+			<fileset dir="${resources.srcdir}">
+				<exclude name="**/.svn"/>
+				<exclude name="**/*.java"/>
+				<exclude name="**/Thumbs.db"/>
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="compile-full" depends="prepare" description="Compiles the all Java source files (including demos and tools).">
+		<javac destdir="${build.home}" target="${jar.target}" includeantruntime="no">
+			<src path="${src.home}"/>
+			<src path="${demos.home}"/>
+		</javac>
+	</target>
+
+	<target name="jar-full" depends="compile-full" description="Creates a min JAR of the application">
+		<jar destfile="${dist.home}${file.separator}${jar.name}">
+			<manifest>
+				<attribute name="Created-By" value="${app.author}"/>
+				<attribute name="Built-By" value="${user.name} - ${ant.version}"/>
+				<attribute name="Implementation-Title" value="${app.name}"/>
+				<attribute name="Implementation-Version" value="${app.version} (${timestamp})"/>
+				<attribute name="Implementation-URL" value="${app.website}"/>
+				<attribute name="Main-Class" value="${jar.main-class}"/>
+			</manifest>
+			<fileset dir="${build.home}">
+				<include name="**/*"/>
+			</fileset>
+		</jar>
+	</target>
+	
+	<target name="dist" depends="jar-full" description="Creates a distribution of all packages">
+		<echo message="Your distribution packages are here: ${dist.home}"/>
+	</target>
+
+	<target name="redist" depends="clean,dist" description="Creates a fresh distribution of all packages">
+	</target>
+
+	<target name="run-demo" depends="jar-full" description="Compiles and runs the GUI application.">
+		<java fork="true" classname="${run.main-class}">
+			<classpath>
+				<fileset dir="${dist.home}">
+					<include name="*.jar"/>
+				</fileset>
+			</classpath>
+		</java>
+	</target>
+	
+</project>
