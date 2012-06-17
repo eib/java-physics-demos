@@ -4,6 +4,16 @@ A re-usable 2D physics and rendering engine.
 
 Also contains a number of built-in physics "effects" and several demos.
 
+Instructions
+============
+How to run these demos:
+* Download an "Executable JAR": https://github.com/eib/java-physics-demos/downloads
+* Make sure Java 1.6 (or greater) is installed on your machine.
+* Windows users can double-click on the Executable JAR file to run the suite of demos.
+   Otherwise, type this into the command-line/terminal/shell (from the same folder as the JAR):
+
+        java -jar PhysicsDemo-vX.YY.jar
+
 
 Physics Engine
 ==============
