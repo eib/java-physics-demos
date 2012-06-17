@@ -35,6 +35,7 @@ import com.eblackwelder.physx.demos.IDemo;
 import com.eblackwelder.physx.demos.OneRingDemo;
 import com.eblackwelder.physx.demos.PressureDemo;
 import com.eblackwelder.physx.demos.RollYourOwnDemo;
+import com.eblackwelder.physx.demos.SolarSystemDemo;
 import com.eblackwelder.physx.demos.options.BooleanOption;
 import com.eblackwelder.physx.demos.options.Option;
 
@@ -55,6 +56,7 @@ public class Main {
 		new OneRingDemo(),
 		new PressureDemo(),
 		new RollYourOwnDemo(),
+		new SolarSystemDemo(),
 	};
 	
 	private static JComponent createOptionsPanel(final IDemo demo, final JFrame parent) {
@@ -144,7 +146,7 @@ public class Main {
 		contentPanel.setBorder(BorderFactory.createEmptyBorder(10, 5, 5, 5));
 		
 		parent.setContentPane(contentPanel);
-		parent.setMinimumSize(new Dimension(600, 350));
+		parent.setMinimumSize(new Dimension(650, 350));
 		parent.pack();
 		parent.setLocationRelativeTo(null);
 		parent.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);

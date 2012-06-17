@@ -35,7 +35,7 @@ public class OneRingDemo extends AbstractDemo {
 
 	private final Option<Boolean> closedWorld      = new BooleanOption("Closed World", true);
 	private final Option<Integer> numParticles     = new IntegerRangeOption("Number of particles", 0, 200, 15, 1);
-	private final Option<Integer> percentPositives = new RandomizableOption<Integer>(new PercentOption("Positive particles", 95, 5), false);
+	private final Option<Integer> percentPositives = new RandomizableOption<Integer>(new PercentOption("Positive particles", 100, 5), false);
 	private final Option<Integer> startingMass     = new RandomizableOption<Integer>(new IntegerRangeOption("Particle Starting Mass", 10, 120, 80, 10), true);
 	private final Option<Double>  maxCharge        = new DoubleRangeOption("Max. Charge", 1, 100, 14, 1);
 	private final Option<Double>  minCharge        = new DoubleRangeOption("Min. Charge", 1, 100, 8, 1);
@@ -160,7 +160,7 @@ public class OneRingDemo extends AbstractDemo {
 		}
 
 		Renderable renderable = renderableCreator.create(50, -300);
-		world.add(new ChargedParticle(renderable, 50, -300, new Vector2D(Utils.random(-300, 300), Utils.random(-300, 300))));
+		world.add(new ChargedParticle(renderable, 100, -300, new Vector2D(Utils.random(-300, 300), Utils.random(-300, 300))));
 		return world;
 	}
 
