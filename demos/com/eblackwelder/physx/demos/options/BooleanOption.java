@@ -6,7 +6,7 @@ package com.eblackwelder.physx.demos.options;
 import javax.swing.JCheckBox;
 import javax.swing.JComponent;
 
-import com.eblackwelder.physx.Utils;
+import com.eblackwelder.math.Utils;
 
 /**
  * @author Ethan

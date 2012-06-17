@@ -11,19 +11,19 @@ import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 import java.util.List;
 
+import com.eblackwelder.graphx.renderable.Renderable;
+import com.eblackwelder.graphx.renderable.RoundedBlock;
+import com.eblackwelder.math.Utils;
+import com.eblackwelder.physx.CollisionDetection;
 import com.eblackwelder.physx.Main;
-import com.eblackwelder.physx.Utils;
 import com.eblackwelder.physx.demos.options.ChoicesOption;
 import com.eblackwelder.physx.demos.options.IntegerRangeOption;
 import com.eblackwelder.physx.demos.options.Option;
 import com.eblackwelder.physx.demos.options.PercentOption;
 import com.eblackwelder.physx.demos.options.RandomizableOption;
-import com.eblackwelder.physx.object.impl.KinematicsObject;
-import com.eblackwelder.physx.physics.CollisionDetection;
-import com.eblackwelder.physx.renderable.Renderable;
-import com.eblackwelder.physx.renderable.RoundedBlock;
-import com.eblackwelder.physx.worldMode.BoundedWorldMode;
-import com.eblackwelder.physx.worldMode.WorldMode;
+import com.eblackwelder.world.model.impl.KinematicsObject;
+import com.eblackwelder.world.modes.BoundedWorldMode;
+import com.eblackwelder.world.modes.WorldMode;
 
 
 /**

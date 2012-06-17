@@ -6,10 +6,10 @@ package com.eblackwelder.physx.effects;
 import java.awt.Color;
 import java.awt.geom.Rectangle2D;
 
-import com.eblackwelder.physx.Vector2D;
-import com.eblackwelder.physx.object.Mass;
-import com.eblackwelder.physx.object.Charge;
-import com.eblackwelder.physx.renderable.Field;
+import com.eblackwelder.graphx.renderable.Field;
+import com.eblackwelder.math.Vector2D;
+import com.eblackwelder.world.model.Charge;
+import com.eblackwelder.world.model.Mass;
 
 /**
  * @author Ethan

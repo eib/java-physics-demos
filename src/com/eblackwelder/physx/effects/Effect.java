@@ -5,7 +5,7 @@ package com.eblackwelder.physx.effects;
 
 import java.awt.geom.Rectangle2D;
 
-import com.eblackwelder.physx.object.Mass;
+import com.eblackwelder.world.model.Mass;
 
 /**
  * @author Ethan

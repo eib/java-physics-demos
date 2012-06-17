@@ -5,7 +5,7 @@ package com.eblackwelder.physx.demos.options;
 
 import javax.swing.SpinnerNumberModel;
 
-import com.eblackwelder.physx.Utils;
+import com.eblackwelder.math.Utils;
 
 /**
  * @author Ethan

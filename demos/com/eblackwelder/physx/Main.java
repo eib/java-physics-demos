@@ -26,6 +26,7 @@ import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.WindowConstants;
 
+import com.eblackwelder.graphx.RenderPanel;
 import com.eblackwelder.physx.demos.BuoyancyDemo;
 import com.eblackwelder.physx.demos.CollisionDetectionDemo;
 import com.eblackwelder.physx.demos.CoulombsLawDemo;
@@ -38,6 +39,7 @@ import com.eblackwelder.physx.demos.RollYourOwnDemo;
 import com.eblackwelder.physx.demos.SolarSystemDemo;
 import com.eblackwelder.physx.demos.options.BooleanOption;
 import com.eblackwelder.physx.demos.options.Option;
+import com.eblackwelder.world.World;
 
 public class Main {
 

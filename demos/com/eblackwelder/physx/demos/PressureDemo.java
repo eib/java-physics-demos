@@ -11,24 +11,24 @@ import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 import java.util.List;
 
+import com.eblackwelder.graphx.renderable.Ball;
+import com.eblackwelder.graphx.renderable.Block;
+import com.eblackwelder.graphx.renderable.Renderable;
+import com.eblackwelder.math.Utils;
+import com.eblackwelder.math.Vector2D;
+import com.eblackwelder.physx.CollisionDetection;
 import com.eblackwelder.physx.Main;
-import com.eblackwelder.physx.Utils;
-import com.eblackwelder.physx.Vector2D;
 import com.eblackwelder.physx.demos.options.BooleanOption;
 import com.eblackwelder.physx.demos.options.ChoicesOption;
 import com.eblackwelder.physx.demos.options.IntegerRangeOption;
 import com.eblackwelder.physx.demos.options.Option;
 import com.eblackwelder.physx.demos.options.RandomizableOption;
-import com.eblackwelder.physx.object.Mass;
-import com.eblackwelder.physx.object.Updatable;
-import com.eblackwelder.physx.object.impl.MassObject;
-import com.eblackwelder.physx.physics.CollisionDetection;
-import com.eblackwelder.physx.renderable.Ball;
-import com.eblackwelder.physx.renderable.Block;
-import com.eblackwelder.physx.renderable.Renderable;
-import com.eblackwelder.physx.worldMode.BoundedWorldMode;
-import com.eblackwelder.physx.worldMode.WorldMode;
-import com.eblackwelder.physx.worldMode.BoundedWorldMode.WALL;
+import com.eblackwelder.world.model.Mass;
+import com.eblackwelder.world.model.Updatable;
+import com.eblackwelder.world.model.impl.MassObject;
+import com.eblackwelder.world.modes.BoundedWorldMode;
+import com.eblackwelder.world.modes.WorldMode;
+import com.eblackwelder.world.modes.BoundedWorldMode.WALL;
 
 
 /**

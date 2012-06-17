@@ -6,8 +6,8 @@ package com.eblackwelder.physx.effects;
 import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 
-import com.eblackwelder.physx.Vector2D;
-import com.eblackwelder.physx.object.Mass;
+import com.eblackwelder.math.Vector2D;
+import com.eblackwelder.world.model.Mass;
 
 /**
  * @author Ethan

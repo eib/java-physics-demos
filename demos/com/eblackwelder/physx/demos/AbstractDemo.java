@@ -8,18 +8,18 @@ import java.util.List;
 
 import javax.swing.JComponent;
 
-import com.eblackwelder.physx.Vector2D;
-import com.eblackwelder.physx.World;
+import com.eblackwelder.graphx.renderable.AccelerationIndicatorOverlay;
+import com.eblackwelder.graphx.renderable.SpeedIndicatorOverlay;
+import com.eblackwelder.math.Vector2D;
 import com.eblackwelder.physx.demos.options.BooleanOption;
 import com.eblackwelder.physx.demos.options.ChoicesOption;
 import com.eblackwelder.physx.demos.options.IntegerRangeOption;
 import com.eblackwelder.physx.demos.options.Option;
-import com.eblackwelder.physx.object.Acceleratable;
-import com.eblackwelder.physx.object.Movable;
-import com.eblackwelder.physx.renderable.AccelerationIndicatorOverlay;
-import com.eblackwelder.physx.renderable.SpeedIndicatorOverlay;
-import com.eblackwelder.physx.worldMode.BoundedWorldMode;
-import com.eblackwelder.physx.worldMode.WorldMode;
+import com.eblackwelder.world.World;
+import com.eblackwelder.world.model.Acceleratable;
+import com.eblackwelder.world.model.Movable;
+import com.eblackwelder.world.modes.BoundedWorldMode;
+import com.eblackwelder.world.modes.WorldMode;
 
 
 /**

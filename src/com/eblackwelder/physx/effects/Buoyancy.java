@@ -4,10 +4,10 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.geom.Rectangle2D;
 
-import com.eblackwelder.physx.Vector2D;
-import com.eblackwelder.physx.World;
-import com.eblackwelder.physx.object.Mass;
-import com.eblackwelder.physx.object.Collidable;
+import com.eblackwelder.math.Vector2D;
+import com.eblackwelder.world.World;
+import com.eblackwelder.world.model.Collidable;
+import com.eblackwelder.world.model.Mass;
 
 /**
  * @author Ethan

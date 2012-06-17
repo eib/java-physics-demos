@@ -11,23 +11,23 @@ import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 import java.util.List;
 
+import com.eblackwelder.graphx.renderable.AbstractColorable;
+import com.eblackwelder.graphx.renderable.AbstractTextMessage;
+import com.eblackwelder.graphx.renderable.Ball;
+import com.eblackwelder.graphx.renderable.Renderable;
+import com.eblackwelder.math.Utils;
+import com.eblackwelder.math.Vector2D;
 import com.eblackwelder.physx.Main;
-import com.eblackwelder.physx.Utils;
-import com.eblackwelder.physx.Vector2D;
 import com.eblackwelder.physx.demos.options.ChoicesOption;
 import com.eblackwelder.physx.demos.options.DoubleRangeOption;
 import com.eblackwelder.physx.demos.options.IntegerRangeOption;
 import com.eblackwelder.physx.demos.options.Option;
 import com.eblackwelder.physx.demos.options.RandomizableOption;
-import com.eblackwelder.physx.object.Mass;
-import com.eblackwelder.physx.object.Updatable;
-import com.eblackwelder.physx.object.impl.MassObject;
-import com.eblackwelder.physx.renderable.AbstractColorable;
-import com.eblackwelder.physx.renderable.AbstractTextMessage;
-import com.eblackwelder.physx.renderable.Ball;
-import com.eblackwelder.physx.renderable.Renderable;
-import com.eblackwelder.physx.worldMode.OpenWorldMode;
-import com.eblackwelder.physx.worldMode.WorldMode;
+import com.eblackwelder.world.model.Mass;
+import com.eblackwelder.world.model.Updatable;
+import com.eblackwelder.world.model.impl.MassObject;
+import com.eblackwelder.world.modes.OpenWorldMode;
+import com.eblackwelder.world.modes.WorldMode;
 
 /**
  * @author Ethan
@@ -156,7 +156,7 @@ public class PendulumDemo extends AbstractDemo {
 
 		double net0 = m.getNetForce().getMagnitude();
 		if (!Utils.almostZero(net0, 0.001)) {
-			System.out.println("!!! Net force: " + net0);
+//			System.out.println("!!! Net force: " + net0);
 		}
 		
 		Vector2D gravity = new Vector2D(0, -mg);
@@ -170,16 +170,16 @@ public class PendulumDemo extends AbstractDemo {
 		Vector2D netForce = m.getNetForce();
 		double net = netForce.getMagnitude();
 		
-		System.out.println(String.format("Net=%.3f, degrees=%.3f, arm=%.0f", net, Math.toDegrees(theta), length));
+//		System.out.println(String.format("Net=%.3f, degrees=%.3f, arm=%.0f", net, Math.toDegrees(theta), length));
 		
 		if (!Utils.almostZero(net - expectedNet, 0.001)) {
-			System.out.println("!!! Net force: " + net + ", expected=" + expectedNet);
+//			System.out.println("!!! Net force: " + net + ", expected=" + expectedNet);
 		}
 		
 		if (!Utils.almostZero(theta, 0.001)) {
 			double weight = -tension.getMagnitude() / cosTheta;
 			if (!Utils.almostZero(weight + mg, 0.001)) {
-				System.out.println("!!! Weight: " + weight);
+//				System.out.println("!!! Weight: " + weight);
 			}
 		}
 //		if (!Utils.almostZero(length - armLength, 0.1)) {

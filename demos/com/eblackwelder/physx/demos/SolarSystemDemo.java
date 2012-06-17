@@ -8,19 +8,19 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.eblackwelder.graphx.renderable.Ball;
+import com.eblackwelder.graphx.renderable.Field;
+import com.eblackwelder.graphx.renderable.Renderable;
 import com.eblackwelder.physx.Main;
 import com.eblackwelder.physx.demos.options.DoubleRangeOption;
 import com.eblackwelder.physx.demos.options.Option;
 import com.eblackwelder.physx.effects.Viscosity;
-import com.eblackwelder.physx.object.Positionable;
-import com.eblackwelder.physx.object.Updatable;
-import com.eblackwelder.physx.object.impl.MassObject;
-import com.eblackwelder.physx.object.impl.PositionedObject;
-import com.eblackwelder.physx.renderable.Ball;
-import com.eblackwelder.physx.renderable.Field;
-import com.eblackwelder.physx.renderable.Renderable;
-import com.eblackwelder.physx.worldMode.OpenWorldMode;
-import com.eblackwelder.physx.worldMode.WorldMode;
+import com.eblackwelder.world.model.Positionable;
+import com.eblackwelder.world.model.Updatable;
+import com.eblackwelder.world.model.impl.MassObject;
+import com.eblackwelder.world.model.impl.PositionedObject;
+import com.eblackwelder.world.modes.OpenWorldMode;
+import com.eblackwelder.world.modes.WorldMode;
 
 public class SolarSystemDemo extends AbstractDemo {
 

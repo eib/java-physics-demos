@@ -2,8 +2,8 @@ package com.eblackwelder.physx.demos;
 
 import java.util.List;
 
-import com.eblackwelder.physx.World;
 import com.eblackwelder.physx.demos.options.Option;
+import com.eblackwelder.world.World;
 
 public interface IDemo {
 	

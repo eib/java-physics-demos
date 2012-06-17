@@ -6,7 +6,7 @@ package com.eblackwelder.physx.demos.options;
 import javax.swing.JComboBox;
 import javax.swing.JComponent;
 
-import com.eblackwelder.physx.Utils;
+import com.eblackwelder.math.Utils;
 
 /**
  * @author Ethan

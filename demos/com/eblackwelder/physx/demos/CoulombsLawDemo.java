@@ -10,21 +10,21 @@ import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 import java.util.List;
 
+import com.eblackwelder.graphx.renderable.Ball;
+import com.eblackwelder.graphx.renderable.Renderable;
+import com.eblackwelder.math.Utils;
+import com.eblackwelder.physx.CoulombsLaw2;
 import com.eblackwelder.physx.Main;
-import com.eblackwelder.physx.Utils;
 import com.eblackwelder.physx.demos.options.BooleanOption;
 import com.eblackwelder.physx.demos.options.DoubleRangeOption;
 import com.eblackwelder.physx.demos.options.IntegerRangeOption;
 import com.eblackwelder.physx.demos.options.Option;
 import com.eblackwelder.physx.demos.options.PercentOption;
 import com.eblackwelder.physx.demos.options.RandomizableOption;
-import com.eblackwelder.physx.object.impl.ChargedParticle;
-import com.eblackwelder.physx.physics.CoulombsLaw2;
-import com.eblackwelder.physx.renderable.Ball;
-import com.eblackwelder.physx.renderable.Renderable;
-import com.eblackwelder.physx.worldMode.BoundedWorldMode;
-import com.eblackwelder.physx.worldMode.OpenWorldMode;
-import com.eblackwelder.physx.worldMode.WorldMode;
+import com.eblackwelder.world.model.impl.ChargedParticle;
+import com.eblackwelder.world.modes.BoundedWorldMode;
+import com.eblackwelder.world.modes.OpenWorldMode;
+import com.eblackwelder.world.modes.WorldMode;
 
 /**
  * @author Ethan
