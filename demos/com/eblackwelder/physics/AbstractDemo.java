@@ -34,10 +34,6 @@ public abstract class AbstractDemo implements IDemo {
 	public abstract String getTitle();
 	public abstract String[] getDescription();
 
-	protected List<Object> getWorldObjects(Dimension worldSize, Rectangle2D worldBounds) {
-		return new ArrayList<Object>();
-	}
-	
 	public void configureWorld(UIWorldDriver driver) {
 		if (showForces.getValue()) {
 			driver.addRenderer(new AppliedForcesRendererAdapter(2, 0.01));
