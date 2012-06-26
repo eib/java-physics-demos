@@ -1,60 +1,59 @@
 java-physics-demos
 ==================
-A re-usable 2D physics and rendering engine.
+A cross-platform 2D physics engine and physics simulations. Built with WorldEngine.
 
-Also contains a number of built-in physics "effects" and several demos.
+https://github.com/eib/java-physics-demos
+https://github.com/eib/java-world-engine
+
 
 Instructions
 ============
 How to run these demos:
 * Download an "Executable JAR": https://github.com/eib/java-physics-demos/downloads
-* Make sure Java 1.6 (or greater) is installed on your machine.
-* Windows users can double-click on the Executable JAR file to run the suite of demos.
-   Otherwise, type this into the command-line/terminal/shell (from the same folder as the JAR):
+* Make sure Java 1.6 (or greater) is installed on your machine. (Type "java -version" into command prompt/terminal/...)
+* Windows and OS X users can double-click on the Executable JAR file to run the suite of demos.
+   Otherwise, it can be run via command-line:
 
         java -jar PhysicsDemo-vX.YY.jar
 
 
 Physics Engine
 ==============
-The physics engine has support for "global" and "interaction" effects.
-It updates in time with the rendering engine. 
+The physics engine has built-in support for a number of real-world forces.
+It can also support any number of user-definable forces.
 
-Global effects:
+Global forces:
 * Gravity
 * Gas/liquid drag (resistance to movement)
 * Electric field (on charged particles)
 
-Interaction effects:
+Pair-wise forces:
 * Collisions (with varying elasticity)
 * Coulomb's law (interactions between charged particles)
-* Buoyancy (when objects are inside another shape)
-
-
-Rendering Engine
-===============
-The rendering engine has support for displaying objects
-with one or more of the following properties:
-* Position (may still be subject to velocity/acceleration)
-* Shape
-* Color
-* Text
-* Layer (for shadows or overlays)
+* Buoyancy (when objects are overlapping a liquid)
 
 
 Demos
 =====
+All simulations include configuration panels to change the properties of the system.
+
+Version 0.04
+------------
 Built-in simulations:
+* Pendulum
+* Solar system
+* Coulomb's Law
+* Charge particles in an electric field
+
+Version 0.02
+------------
+These simulations were built on a custom graphics/world engine and may not
+have been ported to WorldEngine, yet. (They are still available on the downloads page.)
 * Gravity
 * Collision detection
 * Buoyancy
-* Coulomb's law
-* Charged particles in an electric field
 * A sandbox to mix collisions, velocity, mass, and/or gravity.
 * Piston: a "piston" interacting with tiny particles (a "gas") in an enclosed container.
-* Pendulum: still a work-in-progress.
-
-All simulations include configuration panels to change the properties of the system.
 
 
 License
