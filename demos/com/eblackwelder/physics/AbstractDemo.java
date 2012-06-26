@@ -1,7 +1,6 @@
 package com.eblackwelder.physics;
 
 import java.awt.Dimension;
-import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
 import java.util.List;
 

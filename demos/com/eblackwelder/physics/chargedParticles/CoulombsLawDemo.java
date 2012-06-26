@@ -40,7 +40,7 @@ public class CoulombsLawDemo extends ChargedParticleDemo {
 		options.add(chargeMultiplier);
 		options.add(startingVelocity);
 		options.add(maxVelocity);
-		options.add(joinDistance);
+//		options.add(joinDistance);
 		return options;
 	}
 

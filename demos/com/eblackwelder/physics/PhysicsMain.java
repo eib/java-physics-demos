@@ -18,9 +18,7 @@ import javax.swing.WindowConstants;
 
 import com.eblackwelder.physics.chargedParticles.CoulombsLawDemo;
 import com.eblackwelder.physics.chargedParticles.ElectricFieldDemo;
-import com.eblackwelder.physics.collisions.CollisionDemo;
 import com.eblackwelder.physics.cursor.KineticCursorDemo;
-import com.eblackwelder.physics.gravity.GravityDemo;
 import com.eblackwelder.physics.gravity.SolarSystemDemo;
 import com.eblackwelder.physics.options.OptionsPanel;
 import com.eblackwelder.physics.pendulum.PendulumDemo;
@@ -39,8 +37,7 @@ public class PhysicsMain {
 		new ElectricFieldDemo(),
 		new CoulombsLawDemo(),
 		new KineticCursorDemo(),
-		new GravityDemo(),
-		new CollisionDemo(),
+//		new GravityDemo(),
 		new SolarSystemDemo(),
 	};
 	
