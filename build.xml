@@ -83,7 +83,10 @@ A series of Physics demos using re-usable 2D physics and graphics engines.
 			<fileset dir="${build.home}">
 				<include name="**/*"/>
 			</fileset>
-		    <zipgroupfileset dir="lib" includes="*.jar"/>
+		    <zipgroupfileset dir="lib">
+		    	<include name="*.jar"/>
+		    	<exclude name="junit-*.jar"/>
+		    </zipgroupfileset>
 		</jar>
 	</target>
 	
