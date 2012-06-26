@@ -13,6 +13,7 @@ public class OrbitingObject extends PositionedObject implements Updatable, World
 
 	public static final Type planetType = new Type("Planet");
 
+	private final String name;
 	private final Color color;
 	private final double yearsPerMilli;
 	private final double radius;
@@ -21,8 +22,9 @@ public class OrbitingObject extends PositionedObject implements Updatable, World
 	
 	private double year = 0.0;
 	
-	public OrbitingObject(Color color, double yearsPerMilli, double radius, double period,
+	public OrbitingObject(String name, Color color, double yearsPerMilli, double radius, double period,
 			double distanceFromSun) {
+		this.name = name;
 		this.color = color;
 		this.yearsPerMilli = yearsPerMilli;
 		this.radius = radius;
@@ -31,11 +33,16 @@ public class OrbitingObject extends PositionedObject implements Updatable, World
 	}
 
 	public OrbitingObject(Planet p, double yearsPerMilli, double radiusScale, double distanceKmScale) {
+		this.name = p.getName();
 		this.color = p.getColor();
 		this.yearsPerMilli = yearsPerMilli;
 		this.radius = Math.max(1.0, p.getRadius() * radiusScale);
 		this.distanceFromSun = p.getDistanceFromSunKm() * distanceKmScale;
 		this.period = p.getPeriod();
+	}
+
+	public String getName() {
+		return name;
 	}
 
 	public Color getColor() {
@@ -50,6 +57,10 @@ public class OrbitingObject extends PositionedObject implements Updatable, World
 		return radius;
 	}
 
+	public double getElapsedYears() {
+		return this.year / this.period;
+	}
+	
 	@Override
 	public Type getType() {
 		return planetType;
