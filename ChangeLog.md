@@ -4,19 +4,20 @@ Changes
 
 v0.03
 -----
-Threw out the graphics/world engine (now using WorldEngine).
+Threw out the old graphics/world engine; now using WorldEngine (v0.04).
 
 Now contains the following demos:
 * Coulomb's law
 * Electric field
 * Pendulum (fixed!)
 * Kinetic "cursor" (new)
-* Gravity
+* Gravity (WIP)
+* Solar system (way more awesome!)
 
 
 v0.02 (6/16/2012)
 -----
-* Added Solar System demo.
+* Added simple Solar System demo.
 
 
 v0.01 (6/16/2012)

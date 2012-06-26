@@ -7,7 +7,7 @@ A series of Physics demos using re-usable 2D physics and graphics engines.
 
 <project name="Physics Demos" default="prepare">
 	<description>
-		A series of Physics demos using re-usable 2D physics and graphics engines.
+		A 2D physics engine and physics simulations.
 		Copyright 2010 Ethan Blackwelder.
 	</description>
 
@@ -62,6 +62,11 @@ A series of Physics demos using re-usable 2D physics and graphics engines.
 		<javac destdir="${build.home}" target="${jar.target}" includeantruntime="no">
 			<src path="${src.home}"/>
 			<src path="${demos.home}"/>
+			<classpath>
+				<fileset dir="${lib.home}">
+					<include name="*.jar"/>
+				</fileset>
+			</classpath>
 		</javac>
 	</target>
 
@@ -78,6 +83,7 @@ A series of Physics demos using re-usable 2D physics and graphics engines.
 			<fileset dir="${build.home}">
 				<include name="**/*"/>
 			</fileset>
+		    <zipgroupfileset dir="lib" includes="*.jar"/>
 		</jar>
 	</target>
 	
